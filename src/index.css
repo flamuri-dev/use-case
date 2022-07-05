@@ -12,7 +12,6 @@ body{
 }
 
 input[type="date"] {
-  -webkit-align-items: center;
   display: -webkit-inline-flex;
   overflow: hidden;
   padding: 0;
