@@ -115,7 +115,7 @@ input[type="date"] {
 }
 
 .connect-wallet-button, .mint-button {
-  background: -webkit-linear-gradient(left, #e3e3eb, #35aee2);
+  background: -webkit-linear-gradient(left, #9797b3, #2196f3);
   color: #374151;
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
