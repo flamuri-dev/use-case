@@ -58,6 +58,10 @@ input[type="date"] {
   width: 300px;
 }
 
+.connect {
+  white-space: nowrap;
+}
+
 .info--opensea {
   background-color: white;
   color: #374151;
@@ -75,6 +79,7 @@ input[type="date"] {
 .info--opensea--logo {
   width: 15px;
   height: 15px;
+  margin-right: -8px;
 }
 
 .info--opensea, .info--mint, .info--wallet {
