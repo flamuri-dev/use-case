@@ -1,13 +1,163 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Inter;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #23252C;
+  margin-bottom: 50px;
+}
+
+input[type="date"] {
+  -webkit-align-items: center;
+  display: -webkit-inline-flex;
+  overflow: hidden;
+  padding: 0;
+  -webkit-padding-start: 1px;
+  width: 150px;
+  align-self: center;
+}
+
+.infoContainer {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info--image, .info--name, .info--job, .info--btn {
+  align-self: center;
+}
+
+.info--name {
+  margin-top: 22px;
+  margin-bottom: 7px;
+  color: white;
+  font-size: 25px;
+}
+
+.info--job {
+  color: #F3BF99;
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.info--image {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+
+.info--profile {
+  background-color: #1A1B21;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.info--opensea {
+  background-color: white;
+  color: #374151;
+  text-decoration: none;
+}
+
+.info--dates {
+  color: white;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.info--opensea--logo {
+  width: 15px;
+  height: 15px;
+}
+
+.info--opensea, .info--mint, .info--wallet {
+  border-radius: 6px;
+  gap: 5px;
+  font-size: 14px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:110px;
+  height:30px;
+}
+
+.info--btn {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-button {
+  height: 30px;
+  border: 0;
+  width: 110px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+}
+
+.connect-wallet-button, .mint-button {
+  background: -webkit-linear-gradient(left, #e3e3eb, #35aee2);
+  color: #374151;
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+.about--title, .interests--title {
+  color: #F5F5F5;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.about--text, .interests--text {
+  color: #DCDCDC;
+  font-size: 11px;
+  font-weight: lighter;
+}
+
+.aboutContainer, .interestsContainer {
+  background-color: #1A1B21;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 30px 0 30px;
+}
+
+.footerContainer > a {
+  text-decoration: none;
+  outline: none;
+  color: #918E9B;
+  text-decoration: none;
+}
+
+.interestsContainer {
+  padding-bottom: 30px;
+}
+
+.footerContainer {
+  background-color: #161619;
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  color: #918E9B;
+  border-radius: 0 0 10px 10px;
+  padding:10px 25px 10px 25px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:25px;
+  font-size: 25px;
 }
