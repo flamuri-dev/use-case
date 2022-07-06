@@ -133,16 +133,16 @@ function Mint() {
     )
 
     return (
-        <div className="infoContainer">
-            <img className="info--image" alt="RentMyApartment logo" src={logo} />
-            <div className="info--profile">
-                <h1 className="info--name">RentMyApartment</h1>
-                <h3 className="info--job">Rua de Sá da Bandeira, 363</h3>
-                <span className="info--dates">Start: <input type="date" placeholder="Start" value={start} onChange={event => setStart(event.target.value)} /></span>
-                <span className="info--dates">End: <input type="date" placeholder="End" value={end} onChange={event => setEnd(event.target.value)} /></span>
-                <div className="info--btn">
+        <div className="mintContainer">
+            <img className="mint--image" alt="RentMyApartment logo" src={logo} />
+            <div className="mint--profile">
+                <h1 className="mint--name">RentMyApartment</h1>
+                <h3 className="mint--address">Rua de Sá da Bandeira, 363</h3>
+                <span className="mint--dates">Start: <input type="date" placeholder="Start" value={start} onChange={event => setStart(event.target.value)} /></span>
+                <span className="mint--dates">End: <input type="date" placeholder="End" value={end} onChange={event => setEnd(event.target.value)} /></span>
+                <div className="mint--btn">
                     {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
-                    <a className="info--btn info--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="info--opensea--logo" src={opensea} /> Collection</a>
+                    <a className="mint--btn mint--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="info--opensea--logo" src={opensea} /> Collection</a>
                 </div>
             </div>
         </div>

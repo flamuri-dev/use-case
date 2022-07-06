@@ -20,24 +20,24 @@ input[type="date"] {
   align-self: center;
 }
 
-.infoContainer {
+.mintContainer {
   margin-top: 44px;
   display: flex;
   flex-direction: column;
 }
 
-.info--image, .info--name, .info--job, .info--btn {
+.mint--image, .mint--name, .mint--address, .mint--btn {
   align-self: center;
 }
 
-.info--name {
+.mint--name {
   margin-top: 22px;
   margin-bottom: 7px;
   color: white;
   font-size: 25px;
 }
 
-.info--job {
+.mint--address {
   color: #F3BF99;
   font-size: 13px;
   margin-bottom: 8px;
@@ -50,7 +50,7 @@ input[type="date"] {
   border-radius: 10px 10px 0 0;
 }
 
-.info--profile {
+.mint--profile {
   background-color: #1A1B21;
   align-self: center;
   display: flex;
@@ -121,19 +121,19 @@ input[type="date"] {
   animation: gradient-animation 4s ease infinite;
 }
 
-.about--title, .interests--title {
+.about--title, .thanks--title {
   color: #F5F5F5;
   font-size: 16px;
   padding: 5px 0;
 }
 
-.about--text, .interests--text {
+.about--text, .thanks--text {
   color: #DCDCDC;
   font-size: 11px;
   font-weight: lighter;
 }
 
-.aboutContainer, .interestsContainer {
+.aboutContainer, .thanksContainer {
   background-color: #1A1B21;
   width: 300px;
   margin: 0 auto;
@@ -147,7 +147,7 @@ input[type="date"] {
   text-decoration: none;
 }
 
-.interestsContainer {
+.thanksContainer {
   padding-bottom: 30px;
 }
 

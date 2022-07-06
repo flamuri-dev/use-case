@@ -1,12 +1,12 @@
 import React from "react"
 
-function Interests() {
+function Thanks() {
     return (
-        <div className="interestsContainer">
-            <h2 className="interests--title">Thank you...</h2>
-            <p className="interests--text">...for choosing us for your recent stay in Porto. We look forward to welcoming you!</p>
+        <div className="thanksContainer">
+            <h2 className="thanks--title">Thank you...</h2>
+            <p className="thanks--text">...for choosing us for your recent stay in Porto. We look forward to welcoming you!</p>
         </div>
     )
 }
 
-export default Interests
+export default Thanks
