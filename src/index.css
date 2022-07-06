@@ -121,19 +121,29 @@ input[type="date"] {
   animation: gradient-animation 4s ease infinite;
 }
 
-.about--title, .thanks--title {
+.about--title, .thanks--title, .mint--rating--title {
   color: #F5F5F5;
   font-size: 16px;
   padding: 5px 0;
 }
 
-.about--text, .thanks--text {
+.about--text, .thanks--text, .mint--ratings {
   color: #DCDCDC;
   font-size: 11px;
   font-weight: lighter;
 }
 
-.aboutContainer, .thanksContainer {
+.mint--ratings--span {
+  color: #F3BF99;
+}
+
+.mint--ratings {
+  margin-bottom: 10px;
+  font-size: 10px;
+  max-width: 400px;
+}
+
+.aboutContainer, .thanksContainer, .mint--rating {
   background-color: #1A1B21;
   width: 300px;
   margin: 0 auto;

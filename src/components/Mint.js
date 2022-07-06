@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import rent from '../utils/RentMyApartment.json';
 
-const CONTRACT_ADDRESS = "0x8745Fa91ad61811cc27646754275Aa10920240D5";
+const CONTRACT_ADDRESS = "0x3a018Cf423bD88F18A709C96743e1b7c8e923C23";
 
 function toTimestamp(strDate) { var datum = Date.parse(strDate); return datum / 1000; }
 
@@ -14,6 +14,8 @@ function Mint() {
     const [currentAccount, setCurrentAccount] = useState("");
     const [start, setStart] = React.useState('');
     const [end, setEnd] = React.useState('');
+    const [allRatings, setAllRatings] = useState([]);
+    const contractABI = rent.abi;
 
     const checkIfWalletIsConnected = async () => {
         const { ethereum } = window;
@@ -31,6 +33,7 @@ function Mint() {
             const account = accounts[0];
             console.log("Found an authorized account:", account);
             setCurrentAccount(account);
+            getAllRatings();
 
             let chainId = await ethereum.request({ method: 'eth_chainId' });
             console.log("Connected to chain " + chainId);
@@ -115,6 +118,39 @@ function Mint() {
             console.log(error)
         }
     }
+    
+
+    const getAllRatings = async () => {
+		const { ethereum } = window;
+
+		try {
+			if (ethereum) {
+				const provider = new ethers.providers.Web3Provider(ethereum);
+				const signer = provider.getSigner();
+				const rentContract = new ethers.Contract(
+					CONTRACT_ADDRESS,
+					contractABI,
+					signer
+				);
+				const ratings = await rentContract.getAllRatings();
+
+				const ratingsCleaned = ratings.map(rating => {
+					return {
+						address: rating.user,
+                        rating: rating.rating,
+						timestamp: new Date(rating.timestamp * 1000),
+						message: rating.message
+					};
+				});
+
+				setAllRatings(ratingsCleaned);
+			} else {
+				console.log("Ethereum object doesn't exist!");
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
     useEffect(() => {
         checkIfWalletIsConnected();
@@ -143,6 +179,19 @@ function Mint() {
                 <div className="mint--btn">
                     {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
                     <a className="mint--btn mint--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="mint--opensea--logo" src={opensea} /> Collection</a>
+                </div>
+                <div className="mint--rating">
+                    <h2 className="mint--rating--title">Ratings</h2>
+                    {allRatings.map((rating, index) => {
+                        return (
+                            <div className="mint--ratings" key={index}>
+                                <div>Address: {rating.address}</div>
+                                <div>Rating: {rating.rating.toString()}</div>
+                                <div>Message: {rating.message}</div>
+                                <div>Time: {rating.timestamp.toString()}</div>            
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
