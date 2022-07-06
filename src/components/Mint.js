@@ -9,7 +9,7 @@ const CONTRACT_ADDRESS = "0xe3AE2442b5E144Ff0bb22005e6a8F65221427698";
 
 function toTimestamp(strDate) { var datum = Date.parse(strDate); return datum / 1000; }
 
-function Info() {
+function Mint() {
 
     const [currentAccount, setCurrentAccount] = useState("");
     const [start, setStart] = React.useState('');
@@ -149,4 +149,4 @@ function Info() {
     )
 }
 
-export default Info
+export default Mint
