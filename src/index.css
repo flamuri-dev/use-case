@@ -44,7 +44,7 @@ input[type="date"] {
   font-weight: normal;
 }
 
-.info--image {
+.mint--image {
   width: 300px;
   height: 300px;
   border-radius: 10px 10px 0 0;
@@ -62,13 +62,13 @@ input[type="date"] {
   white-space: nowrap;
 }
 
-.info--opensea {
+.mint--opensea {
   background-color: white;
   color: #374151;
   text-decoration: none;
 }
 
-.info--dates {
+.mint--dates {
   color: white;
   font-size: 14px;
   align-items: center;
@@ -76,13 +76,13 @@ input[type="date"] {
   flex-direction: column;
 }
 
-.info--opensea--logo {
+.mint--opensea--logo {
   width: 15px;
   height: 15px;
   margin-right: -8px;
 }
 
-.info--opensea, .info--mint, .info--wallet {
+.mint--opensea, .mint--mint, .mint--wallet {
   border-radius: 6px;
   gap: 5px;
   font-size: 14px;
@@ -93,7 +93,7 @@ input[type="date"] {
   height:30px;
 }
 
-.info--btn {
+.mint--btn {
   display: flex;
   gap: 15px;
   margin-top: 15px;

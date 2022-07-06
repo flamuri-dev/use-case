@@ -1,7 +1,7 @@
 import React from "react"
-import Info from "./components/Mint"
+import Mint from "./components/Mint"
 import About from "./components/About"
-import Interests from "./components/Thanks"
+import Thanks from "./components/Thanks"
 import Footer from "./components/Footer"
 import "./index.css"
 

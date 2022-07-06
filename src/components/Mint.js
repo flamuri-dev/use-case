@@ -121,13 +121,13 @@ function Mint() {
     }, [])
 
     const renderNotConnectedContainer = () => (
-        <button onClick={connectWallet} className="cta-button connect-wallet-button info--btn">
+        <button onClick={connectWallet} className="cta-button connect-wallet-button mint--btn">
             <span className="connect">Connect Wallet</span>
         </button>
     );
 
     const renderMintUI = () => (
-        <button onClick={askContractToMintNft} className="cta-button mint-button info--btn">
+        <button onClick={askContractToMintNft} className="cta-button mint-button mint--btn">
             Mint
         </button>
     )
@@ -142,7 +142,7 @@ function Mint() {
                 <span className="mint--dates">End: <input type="date" placeholder="End" value={end} onChange={event => setEnd(event.target.value)} /></span>
                 <div className="mint--btn">
                     {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
-                    <a className="mint--btn mint--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="info--opensea--logo" src={opensea} /> Collection</a>
+                    <a className="mint--btn mint--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="mint--opensea--logo" src={opensea} /> Collection</a>
                 </div>
             </div>
         </div>
