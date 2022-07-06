@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import rent from '../utils/RentMyApartment.json';
 
-const CONTRACT_ADDRESS = "0xe3AE2442b5E144Ff0bb22005e6a8F65221427698";
+const CONTRACT_ADDRESS = "0x8745Fa91ad61811cc27646754275Aa10920240D5";
 
 function toTimestamp(strDate) { var datum = Date.parse(strDate); return datum / 1000; }
 
