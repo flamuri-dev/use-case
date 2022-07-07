@@ -20,6 +20,21 @@ input[type="date"] {
   align-self: center;
 }
 
+.pontuation {
+  background-color: #F3BF99;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  font-weight: bold;
+}
+
+.rating-imp {
+  font-size: 15px;
+  color: #F3BF99;
+  margin-bottom: 50px;
+}
+
 .mintContainer {
   margin-top: 44px;
   display: flex;
@@ -133,11 +148,16 @@ input[type="date"] {
   font-weight: lighter;
 }
 
+.rating--other {
+  margin-top: 10px;
+}
+
 .mint--ratings--span {
   color: #F3BF99;
 }
 
 .mint--ratings {
+  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 10px;
   max-width: 400px;

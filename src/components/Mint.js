@@ -182,14 +182,15 @@ function Mint() {
                     <a className="mint--btn mint--opensea" target="_blank" rel="noopener noreferrer" href="https://testnets.opensea.io/collection/rentmyapartment-porto"><img alt="Opensea Logo" className="mint--opensea--logo" src={opensea} /> Collection</a>
                 </div>
                 <div className="mint--rating">
-                    <h2 className="mint--rating--title">Ratings</h2>
                     {allRatings.map((rating, index) => {
                         return (
                             <div className="mint--ratings" key={index}>
-                                <div><span className="mint--ratings--span">Address:</span> <EllipsisText text={rating.address} length={"15"} /></div>
-                                <div><span className="mint--ratings--span">Rating:</span> {rating.rating.toString()}</div>
-                                <div><span className="mint--ratings--span">Message:</span> {rating.message}</div>
-                                <div><span className="mint--ratings--span">Time:</span> {rating.timestamp.toString()}</div>            
+                                <div><span className="rating-imp">Rating: <span className="pontuation">{rating.rating.toString()}</span></span></div>
+                                <div className="rating--other">
+                                    <div><span className="mint--ratings--span">Address:</span> <EllipsisText text={rating.address} length={"15"} /></div>
+                                    <div><span className="mint--ratings--span">Message:</span> {rating.message}</div>
+                                    <div><span className="mint--ratings--span">Time:</span> {rating.timestamp.toString()}</div>    
+                                </div>        
                             </div>
                         );
                     })}
