@@ -105,7 +105,8 @@ function Mint() {
                 const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, rent.abi, signer);
 
                 console.log("Going to pop wallet now to pay gas...")
-                let nftTxn = await connectedContract.rent(toTimestamp(start), toTimestamp(end));
+                let daysCount = ((toTimestamp(end) - toTimestamp(start)) / 60 / 60 / 24) + 1;
+                let nftTxn = await connectedContract.rent(0.01 * daysCount, toTimestamp(start), toTimestamp(end));
 
                 console.log("Mining...please wait.")
                 await nftTxn.wait();
