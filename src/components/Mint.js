@@ -106,10 +106,10 @@ function Mint() {
 
                 console.log("Going to pop wallet now to pay gas...")
                 let daysCount = ((toTimestamp(end) - toTimestamp(start)) / 60 / 60 / 24) + 1;
-                let price = 0.01 * daysCount;
-                let nftTxn = await connectedContract.rent({
+                let price = (0.01 * daysCount).toString();
+                let nftTxn = await connectedContract.rent(toTimestamp(start), toTimestamp(end), {
                     value: price
-                }, toTimestamp(start), toTimestamp(end));
+                });
 
                 console.log("Mining...please wait.")
                 await nftTxn.wait();
