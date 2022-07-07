@@ -4,6 +4,7 @@ import opensea from '../images/opensea.png';
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import rent from '../utils/RentMyApartment.json';
+import EllipsisText from "react-ellipsis-text";
 
 const CONTRACT_ADDRESS = "0x3a018Cf423bD88F18A709C96743e1b7c8e923C23";
 
@@ -185,10 +186,10 @@ function Mint() {
                     {allRatings.map((rating, index) => {
                         return (
                             <div className="mint--ratings" key={index}>
-                                <div>Address: {rating.address}</div>
-                                <div>Rating: {rating.rating.toString()}</div>
-                                <div>Message: {rating.message}</div>
-                                <div>Time: {rating.timestamp.toString()}</div>            
+                                <div><span className="mint--ratings--span">Address:</span> <EllipsisText text={rating.address} length={"15"} /></div>
+                                <div><span className="mint--ratings--span">Rating:</span> {rating.rating.toString()}</div>
+                                <div><span className="mint--ratings--span">Message:</span> {rating.message}</div>
+                                <div><span className="mint--ratings--span">Time:</span> {rating.timestamp.toString()}</div>            
                             </div>
                         );
                     })}
