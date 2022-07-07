@@ -108,7 +108,7 @@ function Mint() {
                 let daysCount = ((toTimestamp(end) - toTimestamp(start)) / 60 / 60 / 24) + 1;
                 let price = (0.01 * daysCount).toString();
                 let nftTxn = await connectedContract.rent(toTimestamp(start), toTimestamp(end), {
-                    value: price
+                    value: ethers.utils.parseEther(price)
                 });
 
                 console.log("Mining...please wait.")
