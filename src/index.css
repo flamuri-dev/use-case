@@ -22,6 +22,8 @@ input[type="date"] {
 
 .pontuation {
   background-color: #F3BF99;
+  width: 32px;
+  height: 32px;
   color: white;
   font-size: 18px;
   border-radius: 5px 5px 5px 5px;
