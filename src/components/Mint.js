@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import rent from '../utils/RentMyApartment.json';
 import EllipsisText from "react-ellipsis-text";
 
-const CONTRACT_ADDRESS = "0x5Cef3943EA32DBCdd440cbEc7B47A623B7f5c9E3";
+const CONTRACT_ADDRESS = "0x9eb34083fE36FE4dc6A74B1eA4e33e7f18623684";
 
 function toTimestamp(strDate) { var datum = Date.parse(strDate); return datum / 1000; }
 
